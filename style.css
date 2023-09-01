@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Square+Peg&display=swap');
+
+* {
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: .2rem;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d1c1c;
+    /* font-family: 'Square Peg', cursive; */
+}
+
+.body,
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.control {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    color: #ece0dae8;
+    margin: 0;
+}
+
+button {
+    color: #193451;
+    background: #ece0dae8;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 800;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+}
+
+span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    background: rgb(75, 105, 63);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color: #ece0dae8;
+}
+
+button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+
+.game-container {
+    position: relative;
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+    background-color: #ece0dae8;
+    border-top: 20px solid rgb(75, 105, 63);
+    border-left: 20px solid rgb(75, 105, 63);
+    border-right: 20px solid rgb(75, 105, 63);
+}
+
+.bat {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    background-color: #193451;
+    bottom: 10px;
+    left: 160px;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #193451;
+    background-color: #696438;
+    border-radius: 50%;
+}
+
+#message {
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #193451;
+}
